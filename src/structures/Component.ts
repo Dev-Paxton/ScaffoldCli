@@ -14,7 +14,8 @@ export default class Component implements Entity {
     path: string;
     create: () => void;
     choice: inquirerChoice<string>; 
-    dependencies: string[];
+    dependencies: string[]
+    devDependencies: string[];
 
     constructor (options: {
         name: string;
@@ -22,11 +23,13 @@ export default class Component implements Entity {
         create: () => void
         choice: inquirerChoice<string> 
         dependencies: string[];
+        devDependencies: string[];
     }) {
         this.name = options.name
         this.path = options.path
         this.create = options.create
         this.choice = options.choice
         this.dependencies = options.dependencies
+        this.devDependencies = options.devDependencies
     }
 }

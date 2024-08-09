@@ -14,6 +14,7 @@ export default new Preset({
         config.choice, gitignore.choice, logger.choice
     ],
     dependencies: [],
+    devDependencies: [ 'typescript', 'ts-node'],
     create: () => {
         fs.cpSync(path, Config.dest, { recursive: true })
     }

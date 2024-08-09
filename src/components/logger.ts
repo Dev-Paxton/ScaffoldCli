@@ -11,7 +11,8 @@ export default new Component({
         name: 'Winston logger',
         value: 'logger'
     },
-    dependencies: [],
+    dependencies: ["winston"],
+    devDependencies: [],
     create: () => {
         fs.cpSync(path, `${Config.dest}/src/utils/logger.ts`)
     }

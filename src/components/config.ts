@@ -12,6 +12,7 @@ export default new Component({
         value: 'config'
     },
     dependencies: [],
+    devDependencies: [],
     create: () => {
         switch(Config.preset) {
             case 'default':

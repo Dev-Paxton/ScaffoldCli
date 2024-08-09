@@ -12,6 +12,7 @@ export default new Component({
         value: 'gitignore'
     },
     dependencies: [],
+    devDependencies: [],
     create: () => {
         fs.cpSync(path, `${Config.dest}/.gitignore`)
     }
