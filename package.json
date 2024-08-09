@@ -1,10 +1,12 @@
 {
   "name": "scaffoldcli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Cli to scaffold projects",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc && cp -r assets build && find build -type f -name '.gitkeep' -exec rm -f {} + && npm link"
+    "start": "npm install -g .",
+    "dev": "npm link",
+    "build": "tsc && cp -r assets build && find build -type f -name '.gitkeep' -exec rm -f {} +"
   },
   "bin": {
     "scaffold": "build/index.js"
