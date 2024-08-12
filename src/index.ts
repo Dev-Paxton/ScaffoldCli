@@ -17,7 +17,6 @@ async function main() {
             {
                 name: 'Discord bot',
                 value: 'discordBot',
-                disabled: true
             }
         ]
     })
@@ -47,7 +46,9 @@ async function main() {
     }
     progressBar.stop()
 
-    console.log("To install the required dependencies run")
+    if (preset.text) console.log(preset.text)
+
+    if(dependencies.size != 0 || devDependencies.size != 0) console.log("To install the required dependencies run")
     if (dependencies.size != 0) console.log(`   npm install ${Array.from(dependencies).join(" ")}`)
     if (devDependencies.size != 0) console.log(`   npm install --save-dev ${Array.from(devDependencies).join(" ")}`)
 }

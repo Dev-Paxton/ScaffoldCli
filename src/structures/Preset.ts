@@ -9,6 +9,7 @@ export default class Preset implements Entity {
     componentChoices: readonly (Separator | inquirerChoice<string>)[]
     dependencies: string[];
     devDependencies: string[];
+    text: string
     
     constructor(options: {
         name: string;
@@ -16,7 +17,8 @@ export default class Preset implements Entity {
         create: () => void
         componentChoices: readonly (Separator | inquirerChoice<string>)[]
         dependencies: string[]
-    devDependencies: string[]
+        devDependencies: string[]
+        text?: string
     }) {
         this.name = options.name
         this.path = options.path
@@ -24,5 +26,6 @@ export default class Preset implements Entity {
         this.componentChoices = options.componentChoices
         this.dependencies = options.dependencies
         this.devDependencies = options.devDependencies
+        this.text = options.text ? options.text : ''
     }
 }

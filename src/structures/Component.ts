@@ -10,20 +10,20 @@ export type inquirerChoice<Value> = {
 };
 
 export default class Component implements Entity {
-    name: string;
-    path: string;
-    create: () => void;
-    choice: inquirerChoice<string>; 
+    name: string
+    path: string
+    create: () => void
+    choice: inquirerChoice<string>;
     dependencies: string[]
-    devDependencies: string[];
+    devDependencies: string[]
 
     constructor (options: {
         name: string;
         path: string
         create: () => void
         choice: inquirerChoice<string> 
-        dependencies: string[];
-        devDependencies: string[];
+        dependencies: string[]
+        devDependencies: string[]
     }) {
         this.name = options.name
         this.path = options.path
