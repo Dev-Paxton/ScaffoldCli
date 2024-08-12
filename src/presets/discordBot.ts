@@ -16,7 +16,7 @@ export default new Preset({
     text: `Recommended scripts:
     "scripts": {
         "start": "node build/index.js",
-        "deploy": "npm run build && npm run deploy-commands && npm start",
+        "deploy": "npm install && npm run build && npm run deploy-commands && npm start",
         "build": "tsc",
         "deploy-commands": "node build/deploy-commands.js",
         "dev": "ts-node src/index.ts",
